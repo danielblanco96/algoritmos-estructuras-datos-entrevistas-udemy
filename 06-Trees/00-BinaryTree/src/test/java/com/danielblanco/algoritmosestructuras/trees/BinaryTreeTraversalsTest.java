@@ -3,10 +3,10 @@ package com.danielblanco.algoritmosestructuras.trees;
 import org.junit.jupiter.api.Test;
 
 /*
- *         1
- *     2       3
- *   4   5       6
- *  7   8
+ *          1
+ *      2       3
+ *   4     5      6
+ * 7     8
  */
 public class BinaryTreeTraversalsTest {
 
