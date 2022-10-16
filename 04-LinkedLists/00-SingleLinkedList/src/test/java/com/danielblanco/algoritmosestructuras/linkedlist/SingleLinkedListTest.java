@@ -1,8 +1,6 @@
-package com.danielblanco.ctci.linkedlist;
+package com.danielblanco.algoritmosestructuras.linkedlist;
 
 import org.junit.jupiter.api.Test;
-
-import com.danielblanco.algoritmosestructuras.linkedlist.SingleLinkedList;
 
 public class SingleLinkedListTest {
 
