@@ -1,46 +1,46 @@
 package com.danielblanco.algoritmosestructuras.stackqueue;
 
 public class MyQueue {
-	private Node first;
-	private Node last;
+  private Node first;
+  private Node last;
 
-	public void add(int value) {
-		Node newLast = new Node(value);
-		if (last != null) {
-			last.next = newLast;
-		}
+  public void add(int value) {
+    Node newLast = new Node(value);
+    if (last != null) {
+      last.next = newLast;
+    }
 
-		last = newLast;
+    last = newLast;
 
-		if (first == null) {
-			first = last;
-		}
-	}
+    if (first == null) {
+      first = last;
+    }
+  }
 
-	public int remove() {
-		if (first == null) {
-			throw new MyEmptyQueueException();
-		}
+  public int remove() {
+    if (first == null) {
+      throw new MyEmptyQueueException();
+    }
 
-		int firstValue = first.value;
-		first = first.next;
+    int firstValue = first.value;
+    first = first.next;
 
-		if (first == null) {
-			last = null;
-		}
+    if (first == null) {
+      last = null;
+    }
 
-		return firstValue;
-	}
+    return firstValue;
+  }
 
-	public int peek() {
-		if (first == null) {
-			throw new MyEmptyQueueException();
-		}
+  public int peek() {
+    if (first == null) {
+      throw new MyEmptyQueueException();
+    }
 
-		return first.value;
-	}
+    return first.value;
+  }
 
-	public boolean isEmpty() {
-		return first == null;
-	}
+  public boolean isEmpty() {
+    return first == null;
+  }
 }
