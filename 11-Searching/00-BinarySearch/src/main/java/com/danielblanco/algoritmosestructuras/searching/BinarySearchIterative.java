@@ -10,6 +10,7 @@ public class BinarySearchIterative {
       int mid = left + ((right - left) / 2);
 
       if (array[mid] == target) return mid;
+
       if (array[mid] < target) {
         left = mid + 1;
       } else {
