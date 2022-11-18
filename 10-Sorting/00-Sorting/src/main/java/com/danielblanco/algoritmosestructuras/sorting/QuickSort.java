@@ -1,7 +1,6 @@
 package com.danielblanco.algoritmosestructuras.sorting;
 
-/* The pivot could be the first element of the list, the last, the middle or the median
- *
+/*
  * We divide the list in two lists recursively, one with the elements smaller than the pivot and other with the
  * bigger ones.
  *
@@ -13,32 +12,39 @@ public class QuickSort {
     sort(array, 0, array.length - 1);
   }
 
-  private static void sort(int[] array, int left, int right) {
-    int index = partition(array, left, right);
-    if (left < index - 1) {
-      sort(array, left, index - 1);
-    }
-    if (index < right) {
-      sort(array, index, right);
+  private static void sort(int[] array, int low, int high) {
+    if (low < high) {
+      // partitioning index, arr[p] is now at right place
+      int index = partition(array, low, high);
+
+      // Separately sort elements before partition and after partition
+      sort(array, low, index - 1);
+      sort(array, index + 1, high);
     }
   }
 
-  private static int partition(int[] array, int left, int right) {
-    int pivot = array[left + (right - left) / 2];
-    while (left <= right) {
-      /* Find element on left that should be on right */
-      while (array[left] < pivot) left++;
+  /* This function takes last element as pivot, places
+  the pivot element at its correct position in sorted
+  array, and places all smaller (smaller than pivot) to
+  left of pivot and all greater elements to right of pivot */
+  private static int partition(int[] array, int low, int high) {
+    int pivot = array[high];
 
-      /* Find element on right that should be on left */
-      while (array[right] > pivot) right--;
+    // Index of smaller element and indicates
+    // the right position of pivot found so far
+    int i = (low - 1);
 
-      /* Swap elements, and swap left and right indexes */
-      if (left <= right) {
-        SearchUtils.swap(array, left, right);
-        left++;
-        right--;
+    for (int j = low; j <= high - 1; j++) {
+      if (array[j] < pivot) {
+        // Increment index of smaller element
+        // if current element is smaller than pivot
+        i++;
+        SearchUtils.swap(array, i, j);
       }
     }
-    return left;
+
+    // Swap pivot to correct place
+    SearchUtils.swap(array, i + 1, high);
+    return i + 1;
   }
 }
