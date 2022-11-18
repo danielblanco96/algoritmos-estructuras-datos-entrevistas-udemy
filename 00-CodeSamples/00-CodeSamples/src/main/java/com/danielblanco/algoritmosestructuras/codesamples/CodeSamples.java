@@ -203,11 +203,13 @@ public class CodeSamples {
   }
 
   boolean getBit(int num, int index) {
-    return ((num & (1 << index)) != 0);
+    int mask = (1 << index);
+    return ((num & mask) != 0);
   }
 
   int setBit(int num, int index) {
-    return num | (1 << index);
+    int mask = (1 << index);
+    return num | mask;
   }
 
   int clearBit(int num, int index) {
