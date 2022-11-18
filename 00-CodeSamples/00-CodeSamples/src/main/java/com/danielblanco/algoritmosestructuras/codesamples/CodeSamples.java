@@ -201,4 +201,27 @@ public class CodeSamples {
 
     return previous + previousOfPrevious;
   }
+
+  boolean getBit(int num, int index) {
+    return ((num & (1 << index)) != 0);
+  }
+
+  int setBit(int num, int index) {
+    return num | (1 << index);
+  }
+
+  int clearBit(int num, int index) {
+    int mask = ~(1 << index);
+    return num & mask;
+  }
+
+  int clearBitsFromMostSignificantToIndex(int num, int index) {
+    int mask = (1 << index) - 1;
+    return num & mask;
+  }
+
+  int cleatBitsFromIndexToLessSignificant(int num, int index) {
+    int mask = (-1 << (index + 1));
+    return num & mask;
+  }
 }
