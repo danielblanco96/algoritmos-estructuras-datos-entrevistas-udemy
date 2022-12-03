@@ -10,17 +10,17 @@ public class BinarySearch {
     if (right >= left) {
       int mid = left + (right - left) / 2;
 
-      // Element present in the middle of the array
+      // Elemento presente en el elemento central del array.
       if (array[mid] == target) return mid;
 
-      // If element is smaller than middle element, it has to be in the left side
+      // Si el elemento es menor que el central, se debe encontrar a su izquierda.
       if (array[mid] > target) return binarySearch(array, left, mid - 1, target);
 
-      // Else the element can only be present in the right subarray
+      // En caso contrario solo puede encontrarse en la mitad derecha.
       return binarySearch(array, mid + 1, right, target);
     }
 
-    // Element not present in array
+    // El elemento no se ha encontrado.
     return -1;
   }
 }

@@ -10,14 +10,14 @@ public class MergeSort {
   private static void sort(int[] array, int[] helper, int low, int high) {
     if (low < high) {
       int middle = (low + high) / 2;
-      sort(array, helper, low, middle); // Sort left side
-      sort(array, helper, middle + 1, high); // Sort right side
-      merge(array, helper, low, middle, high); // Merge both
+      sort(array, helper, low, middle); // Ordena lado izquierdo
+      sort(array, helper, middle + 1, high); // Ordena lado derecho
+      merge(array, helper, low, middle, high); // Mezcla ambos
     }
   }
 
   private static void merge(int[] array, int[] helper, int low, int middle, int high) {
-    /* Copy both halves into the helper array */
+    /* Copia ambas mitades en el array auxiliar */
     for (int i = low; i <= high; i++) {
       helper[i] = array[i];
     }
@@ -26,8 +26,8 @@ public class MergeSort {
     int helperRight = middle + 1;
     int current = low;
 
-    /* Iterate through helper array. Compare left and right half, copying back the smaller element from
-     * the two halves into the original array. */
+    /* Itera el array auxiliar. Compara la mitad izquierda y la derecha, copiando el menor elemento
+     * de las dos mitades al array original. */
     while (helperLeft <= middle && helperRight <= high) {
       if (helper[helperLeft] <= helper[helperRight]) {
         array[current] = helper[helperLeft];
@@ -39,12 +39,14 @@ public class MergeSort {
       current++;
     }
 
-    /* Copy the rest of the left side of the array into the target array
-     * The right elements aren't copied because they are already in the array. For example
-     * 3 5 14 || 2 4 6. We copy to the array the 2, 3, 4, 5 and 6, so we need to copy the rest of the left (14)
-     * Other: 2 4 6 || 3 5 14. We copy 2, 3, 4, 5 and 6, but the 14 is already in that position in the array.
-     * The helper array is a copy of the array, so we don't need to copy that part!
-     *  */
+    /* Copia el resto del lado izquierdo en el target array.
+     * Los elementos de la izquierda no se copian ya que ya se encuentran en el array. Por ejemplo
+     * 3 5 14 || 2 4 6. Por orden, copiamos 2, 3, 4, 5 y 6 al array, por lo que tenemos que copiar
+     * el resto de la izquierda (14)
+     * Otro ejemplo: 2 4 6 || 3 5 14. Copiamos 2, 3, 4, 5 y 6 al array.
+     * El array helper es una copia del array, por lo que no tenemos que copiar esa parte,
+     * ya está en su posición.
+     */
     int remaining = middle - helperLeft;
     for (int i = 0; i <= remaining; i++) {
       array[current + i] = helper[helperLeft + i];

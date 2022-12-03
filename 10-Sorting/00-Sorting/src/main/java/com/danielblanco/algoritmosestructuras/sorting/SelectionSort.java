@@ -4,8 +4,8 @@ public class SelectionSort {
   static void sort(int[] array) {
 
     for (int i = 0; i < array.length - 1; i++) {
-      // In each iteration, select the minimum and place it at the beginning of the unsorted part of
-      // the array
+      // En cada iteración seleccionamos el mínimo y lo movemos al inicio de la parte desordenada
+      // del array.
       int minIndex = findMinimumElementIndex(array, i);
       SearchUtils.swap(array, i, minIndex);
     }
