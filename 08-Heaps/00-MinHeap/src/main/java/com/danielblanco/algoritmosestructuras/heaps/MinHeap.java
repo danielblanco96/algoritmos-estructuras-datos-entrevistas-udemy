@@ -26,7 +26,7 @@ public class MinHeap {
   }
 
   private boolean isLeaf(int i) {
-    if (rightChildIndex(i) >= size || leftChildIndex(i) >= size) {
+    if (rightChildIndex(i) >= size && leftChildIndex(i) >= size) {
       return true;
     }
     return false;
