@@ -8,12 +8,12 @@ public class SingleLinkedListTest {
   public void test() {
     SingleLinkedList list = new SingleLinkedList();
     list.print();
-    list.appentToTail(1);
-    list.appentToTail(2);
-    list.appentToTail(3);
+    list.appendToTail(1);
+    list.appendToTail(2);
+    list.appendToTail(3);
     list.print();
-    list.appentToTail(4);
-    list.appentToTail(5);
+    list.appendToTail(4);
+    list.appendToTail(5);
     list.print();
     list.deleteNode(1);
     list.print();

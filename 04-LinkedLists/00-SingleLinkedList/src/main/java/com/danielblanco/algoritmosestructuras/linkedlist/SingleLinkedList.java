@@ -3,7 +3,7 @@ package com.danielblanco.algoritmosestructuras.linkedlist;
 public class SingleLinkedList {
   public Node head;
 
-  public void appentToTail(int value) {
+  public void appendToTail(int value) {
     if (head == null) {
       head = new Node(value);
       return;
