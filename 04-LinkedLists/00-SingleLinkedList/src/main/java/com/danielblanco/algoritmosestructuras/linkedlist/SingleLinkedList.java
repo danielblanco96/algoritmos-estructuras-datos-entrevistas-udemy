@@ -24,6 +24,7 @@ public class SingleLinkedList {
       return;
     }
 
+    // 4-3-1
     Node current = head;
     while (current.next != null) {
       if (current.next.value == value) {
