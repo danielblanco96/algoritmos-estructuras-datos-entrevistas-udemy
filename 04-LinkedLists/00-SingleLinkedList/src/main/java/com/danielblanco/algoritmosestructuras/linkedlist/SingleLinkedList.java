@@ -24,13 +24,13 @@ public class SingleLinkedList {
       return;
     }
 
-    Node n = head;
-    while (n.next != null) {
-      if (n.next.value == value) {
-        n.next = n.next.next;
+    Node current = head;
+    while (current.next != null) {
+      if (current.next.value == value) {
+        current.next = current.next.next;
         return;
       }
-      n = n.next;
+      current = current.next;
     }
   }
 
