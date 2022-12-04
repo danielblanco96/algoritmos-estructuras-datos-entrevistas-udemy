@@ -19,9 +19,7 @@ public class IsUniqueSolved {
 
     Set<Character> set = new HashSet<Character>();
     for (char c : s.toCharArray()) {
-      if (set.contains(c)) {
-        return false;
-      }
+      if (set.contains(c)) return false;
       set.add(c);
     }
 
