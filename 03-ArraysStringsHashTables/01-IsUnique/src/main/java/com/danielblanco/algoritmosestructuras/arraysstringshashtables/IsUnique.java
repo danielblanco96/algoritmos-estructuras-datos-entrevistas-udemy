@@ -8,7 +8,7 @@ package com.danielblanco.algoritmosestructuras.arraysstringshashtables;
  */
 public class IsUnique {
 
-  public static boolean isUnique(String s) {
+  public boolean isUnique(String s) {
     throw new UnsupportedOperationException("Not implemented yet");
   }
 }

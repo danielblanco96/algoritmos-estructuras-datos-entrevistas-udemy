@@ -9,12 +9,12 @@ import java.util.Set;
  * isUnique("abcde") => true;
  * isUnique("abcded") => false;
  */
-public class IsUniqueSolved {
+public class IsUniqueSolution {
 
   // Asumiendo que es ASCII. Dependiendo de la codificación serán más
   private static int NUMBER_OF_CHARS = 128;
 
-  public static boolean isUnique(String s) {
+  public boolean isUnique(String s) {
     if (s.length() > NUMBER_OF_CHARS) return false;
 
     Set<Character> set = new HashSet<Character>();
