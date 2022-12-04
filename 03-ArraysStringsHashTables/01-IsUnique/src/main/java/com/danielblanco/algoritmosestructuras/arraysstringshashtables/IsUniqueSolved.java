@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /*
- * Dado un método que recibe una String, comprobar si tiene caracteres repetidos o no.
+ * Dado un método que recibe una String, comprobar si todos los caracteres son únicos o no.
  *
  * isUnique("abcde") => true;
  * isUnique("abcded") => false;
