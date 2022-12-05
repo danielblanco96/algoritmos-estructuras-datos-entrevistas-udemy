@@ -9,7 +9,7 @@ public class TwoSumTest {
   @Test
   public void isUniqueTest() {
     int[] array = new int[] {9, 2, 5, 6};
-    TwoSumSolution twoSum = new TwoSumSolution();
+    TwoSum twoSum = new TwoSum();
     assertArrayEquals(new int[] {1, 2}, twoSum.twoSum(array, 7));
     assertArrayEquals(null, twoSum.twoSum(array, 50));
   }
