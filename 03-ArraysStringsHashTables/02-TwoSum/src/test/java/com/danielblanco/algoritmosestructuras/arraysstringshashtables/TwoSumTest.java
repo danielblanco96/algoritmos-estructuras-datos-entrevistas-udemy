@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 public class TwoSumTest {
 
   @Test
-  public void isUniqueTest() {
+  public void twoSumTest() {
     int[] array = new int[] {9, 2, 5, 6};
     TwoSum twoSum = new TwoSum();
     int[] result = twoSum.twoSum(array, 7);
