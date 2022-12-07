@@ -7,7 +7,7 @@ import java.util.List;
  * Dado un array de strings, devuelve los anagramas agrupados. Cualquier orden es válido.
  *
  * Ejemplo:
- *  Input: words = ["saco", "arresto", "programa", "rastreo", "caso"], target = 7
+ *  Input: words = ["saco", "arresto", "programa", "rastreo", "caso"].
  *  Output: [["saco", "caso"], ["arresto", "rastreo"], ["programa"]].
  */
 public class GroupAnagrams {
