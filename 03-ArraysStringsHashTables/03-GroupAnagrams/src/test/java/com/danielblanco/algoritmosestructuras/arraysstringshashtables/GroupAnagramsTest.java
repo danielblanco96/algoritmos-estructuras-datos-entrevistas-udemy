@@ -9,7 +9,7 @@ public class GroupAnagramsTest {
 
   @Test
   public void groupAnagramsTest() {
-    GroupAnagramsSolution groupAnagrams = new GroupAnagramsSolution();
+    GroupAnagrams groupAnagrams = new GroupAnagrams();
     List<List<String>> empty = groupAnagrams.groupAnagrams(new String[] {});
     assertTrue(empty.isEmpty());
 
