@@ -1,6 +1,5 @@
 package com.danielblanco.algoritmosestructuras.arraysstringshashtables._04_zero_matrix;
 
-import java.util.List;
 
 /*
  * Dada una matriz, escribe un algoritmo para establecer ceros en la fila F y columna C si existe un
@@ -19,7 +18,7 @@ import java.util.List;
  */
 public class ZeroMatrix {
 
-  public List<List<String>> zeroMatrix(int[][] matrix) {
+  public void zeroMatrix(int[][] matrix) {
     throw new UnsupportedOperationException("Not implemented yet");
   }
 }
