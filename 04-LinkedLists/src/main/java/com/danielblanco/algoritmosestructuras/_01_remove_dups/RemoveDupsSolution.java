@@ -23,11 +23,11 @@ public class RemoveDupsSolution {
 
     while (current != null && current.next != null) {
       if (!foundValues.add(current.next.value)) {
-        // En caso contrario, debemos eliminar ese nodo
+        // Si ya hemos encontrado ese nodo debemos eliminarlo
         current.next = current.next.next;
       }
 
-      // Por último avanzamos el nodo actual
+      // Por último avanzamos el nodo actual para seguir iterando sobre la lista
       current = current.next;
     }
   }
