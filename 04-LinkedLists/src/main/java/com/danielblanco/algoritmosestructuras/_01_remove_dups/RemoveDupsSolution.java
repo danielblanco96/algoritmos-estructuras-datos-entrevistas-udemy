@@ -18,16 +18,13 @@ public class RemoveDupsSolution {
 
   public void removeDups(Node head) {
     HashSet<Integer> foundValues = new HashSet<Integer>();
-    Node previous = null;
+    foundValues.add(head.value);
     Node current = head;
 
-    while (current != null) {
-      if (foundValues.add(current.value)) {
-        // Si es un valor que nunca hemos visto avanzamos una posición previous
-        previous = current;
-      } else {
+    while (current != null && current.next != null) {
+      if (!foundValues.add(current.next.value)) {
         // En caso contrario, debemos eliminar ese nodo
-        previous.next = current.next;
+        current.next = current.next.next;
       }
 
       // Por último avanzamos el nodo actual
