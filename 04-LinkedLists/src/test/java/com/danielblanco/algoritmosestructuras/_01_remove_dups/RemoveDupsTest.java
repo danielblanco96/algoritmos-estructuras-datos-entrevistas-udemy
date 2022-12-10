@@ -9,7 +9,7 @@ public class RemoveDupsTest {
 
   @Test
   public void removeDupsTest() {
-    RemoveDupsSolution removeDups = new RemoveDupsSolution();
+    RemoveDups removeDups = new RemoveDups();
     Node head = new Node(1);
     head.next = new Node(2);
     head.next.next = new Node(2);
