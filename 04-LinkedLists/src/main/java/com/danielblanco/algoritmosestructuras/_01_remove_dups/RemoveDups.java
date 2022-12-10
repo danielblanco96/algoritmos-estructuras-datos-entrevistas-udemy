@@ -1,5 +1,7 @@
 package com.danielblanco.algoritmosestructuras._01_remove_dups;
 
+import com.danielblanco.algoritmosestructuras._00_linkedlist.Node;
+
 /*
  * Escribe un algoritmo para eliminar los elementos duplicados en una Lista enlazada
  *
@@ -13,7 +15,7 @@ package com.danielblanco.algoritmosestructuras._01_remove_dups;
  */
 public class RemoveDups {
 
-  public boolean removeDups(String s) {
+  public void removeDups(Node head) {
     throw new UnsupportedOperationException("Not implemented yet");
   }
 }
