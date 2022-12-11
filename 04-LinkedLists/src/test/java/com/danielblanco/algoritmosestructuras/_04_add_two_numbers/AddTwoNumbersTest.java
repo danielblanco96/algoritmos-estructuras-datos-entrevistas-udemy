@@ -25,5 +25,13 @@ public class AddTwoNumbersTest {
     assertEquals(4, result.next.value);
     assertEquals(2, result.next.next.value);
     assertEquals(7, result.next.next.next.value);
+
+    list1.next.next.next = null;
+    result = add.addTwoNumbers(list1, list2);
+
+    assertEquals(6, result.value);
+    assertEquals(4, result.next.value);
+    assertEquals(2, result.next.next.value);
+    assertEquals(1, result.next.next.next.value);
   }
 }
