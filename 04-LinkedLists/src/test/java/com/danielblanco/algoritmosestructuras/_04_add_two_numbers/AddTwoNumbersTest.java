@@ -9,7 +9,7 @@ public class AddTwoNumbersTest {
 
   @Test
   public void addTwoNumbersTest() {
-    AddTwoNumbersSolution add = new AddTwoNumbersSolution();
+    AddTwoNumbers add = new AddTwoNumbers();
     Node list1 = new Node(1);
     list1.next = new Node(2);
     list1.next.next = new Node(4);
