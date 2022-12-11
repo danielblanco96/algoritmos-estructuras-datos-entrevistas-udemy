@@ -3,8 +3,8 @@ package com.danielblanco.algoritmosestructuras._02_merge__two_sorted_lists;
 import com.danielblanco.algoritmosestructuras._00_linkedlist.Node;
 
 /*
- * Escribe un algoritmo para combinar dos listas enlazadas ordenadas.
- * El resultado debe ser una única lista enlazada ordenada.
+ * Escribe un algoritmo para combinar dos listas enlazadas simples ordenadas.
+ * El resultado debe ser una única lista enlazada ordenada. Devuelve su head.
  *
  * Ejemplo:
  *  Input: 1->2->4->6, 2->3->5
