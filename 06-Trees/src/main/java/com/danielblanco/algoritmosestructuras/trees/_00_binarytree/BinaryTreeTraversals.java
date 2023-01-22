@@ -1,4 +1,5 @@
-package com.danielblanco.algoritmosestructuras.trees;
+package com.danielblanco.algoritmosestructuras.trees._00_binarytree;
+;
 
 public class BinaryTreeTraversals {
   public static void inOrderTraversal(Node node) {
