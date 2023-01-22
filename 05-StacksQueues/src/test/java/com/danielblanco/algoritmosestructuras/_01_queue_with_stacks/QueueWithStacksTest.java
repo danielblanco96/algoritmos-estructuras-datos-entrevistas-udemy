@@ -1,6 +1,8 @@
 package com.danielblanco.algoritmosestructuras._01_queue_with_stacks;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
@@ -8,7 +10,7 @@ public class QueueWithStacksTest {
 
   @Test
   public void queueWithStacksTest() {
-    QueueWithStacksSolution queueWithStacks = new QueueWithStacksSolution();
+    QueueWithStacks queueWithStacks = new QueueWithStacks();
 
     assertEquals(0, queueWithStacks.size());
     queueWithStacks.add(1);
@@ -18,10 +20,10 @@ public class QueueWithStacksTest {
     assertEquals(2, queueWithStacks.peek());
     assertEquals(2, queueWithStacks.size());
     queueWithStacks.add(4);
-    assertEquals(false, queueWithStacks.isEmpty());
+    assertFalse(queueWithStacks.isEmpty());
     assertEquals(2, queueWithStacks.remove());
     assertEquals(3, queueWithStacks.remove());
     assertEquals(4, queueWithStacks.remove());
-    assertEquals(true, queueWithStacks.isEmpty());
+    assertTrue(queueWithStacks.isEmpty());
   }
 }

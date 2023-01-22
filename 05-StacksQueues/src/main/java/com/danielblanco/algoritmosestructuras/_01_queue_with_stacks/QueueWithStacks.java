@@ -17,15 +17,15 @@ public class QueueWithStacks {
   Deque<Integer> firstStack = new ArrayDeque<>();
   Deque<Integer> secondStack = new ArrayDeque<>();
 
-  public void add(int data) {
+  public void add(Integer value) {
+    firstStack.push(value);
+  }
+
+  public Integer peek() {
     throw new UnsupportedOperationException("Not implemented yet");
   }
 
-  public int remove() {
-    throw new UnsupportedOperationException("Not implemented yet");
-  }
-
-  public int peek() {
+  public Integer remove() {
     throw new UnsupportedOperationException("Not implemented yet");
   }
 
@@ -33,7 +33,7 @@ public class QueueWithStacks {
     throw new UnsupportedOperationException("Not implemented yet");
   }
 
-  public void size() {
+  public int size() {
     throw new UnsupportedOperationException("Not implemented yet");
   }
 }
