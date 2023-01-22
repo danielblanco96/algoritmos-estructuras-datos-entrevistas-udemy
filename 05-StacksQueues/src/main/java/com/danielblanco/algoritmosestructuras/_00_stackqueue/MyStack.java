@@ -1,4 +1,4 @@
-package com.danielblanco.algoritmosestructuras.stackqueue;
+package com.danielblanco.algoritmosestructuras._00_stackqueue;
 
 public class MyStack {
   private Node top;
