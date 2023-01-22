@@ -11,7 +11,7 @@ public class ListOfDepthsTest {
 
   @Test
   public void listOfDepthsTest() {
-    ListOfDepthsSolution listOfDepths = new ListOfDepthsSolution();
+    ListOfDepths listOfDepths = new ListOfDepths();
     Node root = new Node(4);
     root.left = new Node(2);
     root.right = new Node(7);

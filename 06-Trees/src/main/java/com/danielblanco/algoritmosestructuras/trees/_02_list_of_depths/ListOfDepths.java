@@ -1,6 +1,8 @@
 package com.danielblanco.algoritmosestructuras.trees._02_list_of_depths;
 
 import com.danielblanco.algoritmosestructuras.trees._00_binarytree.Node;
+import java.util.LinkedList;
+import java.util.List;
 
 /*
  * Implementa un algoritmo que devuelva una lista enlazada con los nodos de cada nivel. Si el árbol tiene
@@ -19,7 +21,7 @@ import com.danielblanco.algoritmosestructuras.trees._00_binarytree.Node;
  */
 public class ListOfDepths {
 
-  public Node listOfDepths(Node root) {
+  public List<LinkedList<Node>> listOfDepths(Node root) {
     throw new UnsupportedOperationException("Not implemented yet");
   }
 }
