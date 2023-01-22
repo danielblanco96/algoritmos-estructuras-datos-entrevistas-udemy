@@ -8,7 +8,7 @@ import java.util.Deque;
  * estructura de datos.
  *
  * Ejemplo:
- *  Input: (tope) 4->2->5->1
+ *  Input: (tope) 5->1->4->2
  *  Output: (tope) 1->2->4->5
  */
 public class SortStack {
