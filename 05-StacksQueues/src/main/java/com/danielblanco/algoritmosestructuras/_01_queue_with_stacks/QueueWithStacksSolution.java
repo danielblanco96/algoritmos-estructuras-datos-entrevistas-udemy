@@ -11,7 +11,8 @@ import java.util.Deque;
  *
  * Java también tiene la clase Stack, pero su uso no está recomendado por extender de la clase Vector, que
  * no tiene demasiado sentido, y por ser una clase específica y no una interfaz. Si quieres saber más sobre
- * este tema puedes acceder al siguiente enlace: https://stackoverflow.com/questions/12524826/why-should-i-use-deque-over-stack
+ * este tema puedes acceder al siguiente enlace:
+ * https://stackoverflow.com/questions/12524826/why-should-i-use-deque-over-stack
  */
 public class QueueWithStacksSolution {
   Deque<Integer> firstStack = new ArrayDeque<>();
