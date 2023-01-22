@@ -9,7 +9,7 @@ public class InvertBinaryTreeTest {
 
   @Test
   public void invertBinaryTreeTest() {
-    InvertBinaryTreeSolution invertBinaryTree = new InvertBinaryTreeSolution();
+    InvertBinaryTree invertBinaryTree = new InvertBinaryTree();
     Node root = new Node(4);
     root.left = new Node(2);
     root.right = new Node(7);
