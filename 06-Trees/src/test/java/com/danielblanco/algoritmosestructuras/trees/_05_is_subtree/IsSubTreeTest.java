@@ -10,7 +10,7 @@ public class IsSubTreeTest {
 
   @Test
   public void isSubTreeTest() {
-    IsSubTreeSolution isSubTree = new IsSubTreeSolution();
+    IsSubTree isSubTree = new IsSubTree();
     Node first = new Node(4);
     first.left = new Node(5);
     first.right = new Node(7);
