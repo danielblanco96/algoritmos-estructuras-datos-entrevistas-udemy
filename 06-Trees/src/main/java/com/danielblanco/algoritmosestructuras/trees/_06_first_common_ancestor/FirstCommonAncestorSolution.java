@@ -3,37 +3,19 @@ package com.danielblanco.algoritmosestructuras.trees._06_first_common_ancestor;
 import com.danielblanco.algoritmosestructuras.trees._00_binarytree.Node;
 
 /*
- * Determina si el árbol second es subárbol del árbol first.
+ * Devuelve el primer ancestro común de dos nodos.
  *
- * Ejemplo 1:
+ * Ejemplo:
  *  Input:
- *    first:
  *         4
  *      5     7
  *    1   3
  *  8
  *
- *    second:
- *         4
- *      2     7
- *    1   3  5
+ *  firstCommonAncestor(1, 7) = 4
+ *  firstCommonAncestor(1, 4) = null
+ *  firstCommonAncestor(1, 3) = 5
  *
- *  Output: false
- *
- * Ejemplo 2:
- *  Input:
- *    first:
- *         4
- *      5     7
- *    1   3
- *  8
- *
- *    second:
- *         5
- *      1     3
- *    8
- *
- *  Output: true
  */
 public class FirstCommonAncestorSolution {
 
