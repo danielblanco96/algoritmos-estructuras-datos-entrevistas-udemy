@@ -10,7 +10,7 @@ public class FirstCommonAncestorTest {
 
   @Test
   public void firstCommonAncestorTest() {
-    FirstCommonAncestorSolution fca = new FirstCommonAncestorSolution();
+    FirstCommonAncestor fca = new FirstCommonAncestor();
     Node root = new Node(4);
     root.left = new Node(5);
     root.right = new Node(7);

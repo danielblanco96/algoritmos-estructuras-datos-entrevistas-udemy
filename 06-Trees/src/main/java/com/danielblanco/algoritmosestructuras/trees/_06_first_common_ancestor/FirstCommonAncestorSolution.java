@@ -45,7 +45,7 @@ public class FirstCommonAncestorSolution {
     AncestorNode result = new AncestorNode();
     result.nodeFound = leftResult.nodeFound || rightResult.nodeFound;
 
-    if (leftResult.nodeFound && rightResult != null && rightResult.nodeFound) {
+    if (leftResult.nodeFound && rightResult.nodeFound) {
       result.ancestor = currentNode;
     }
 
