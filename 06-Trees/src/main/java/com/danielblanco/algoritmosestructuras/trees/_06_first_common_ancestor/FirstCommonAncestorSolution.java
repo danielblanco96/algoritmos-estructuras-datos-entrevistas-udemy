@@ -28,30 +28,30 @@ public class FirstCommonAncestorSolution {
     return postOrderSearch(root, firstNode, secondNode).ancestor;
   }
 
-  private AncestorNode postOrderSearch(Node currentNode, Node firstNode, Node secondNode) {
-    if (currentNode == null) {
+  private AncestorNode postOrderSearch(Node current, Node firstNode, Node secondNode) {
+    if (current == null) {
       return new AncestorNode();
     }
 
-    AncestorNode leftResult = postOrderSearch(currentNode.left, firstNode, secondNode);
-    if (leftResult.ancestor != null) {
-      return leftResult;
-    }
-    AncestorNode rightResult = postOrderSearch(currentNode.right, firstNode, secondNode);
-    if (rightResult.ancestor != null) {
-      return leftResult;
-    }
+    AncestorNode leftResult = postOrderSearch(current.left, firstNode, secondNode);
+    if (leftResult.ancestor != null) return leftResult;
+
+    AncestorNode rightResult = postOrderSearch(current.right, firstNode, secondNode);
+    if (rightResult.ancestor != null) return rightResult;
 
     AncestorNode result = new AncestorNode();
-    result.nodeFound = leftResult.nodeFound || rightResult.nodeFound;
 
     if (leftResult.nodeFound && rightResult.nodeFound) {
-      result.ancestor = currentNode;
+      result.ancestor = current;
+      return result;
     }
 
-    if (currentNode == firstNode || currentNode == secondNode) {
-      result.nodeFound = true;
-    }
+    result.nodeFound =
+        current == firstNode
+            || current == secondNode
+            || leftResult.nodeFound
+            || rightResult.nodeFound;
+
     return result;
   }
 }
