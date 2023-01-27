@@ -1,9 +1,9 @@
-package com.danielblanco.algoritmosestructuras.graphs._03_clone_graph;
+package com.danielblanco.algoritmosestructuras.graphs._02_clone_graph;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-import com.danielblanco.algoritmosestructuras.graphs._03_clone_graph.CloneGraph.Node;
+import com.danielblanco.algoritmosestructuras.graphs._02_clone_graph.CloneGraph.Node;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 

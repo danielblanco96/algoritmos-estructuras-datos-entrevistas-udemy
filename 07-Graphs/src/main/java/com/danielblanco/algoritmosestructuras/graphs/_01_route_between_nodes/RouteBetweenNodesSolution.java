@@ -1,4 +1,4 @@
-package com.danielblanco.algoritmosestructuras.graphs._02_route_between_nodes;
+package com.danielblanco.algoritmosestructuras.graphs._01_route_between_nodes;
 
 import com.danielblanco.algoritmosestructuras.graphs._00_graph_search.Graph;
 import com.danielblanco.algoritmosestructuras.graphs._00_graph_search.GraphNode;

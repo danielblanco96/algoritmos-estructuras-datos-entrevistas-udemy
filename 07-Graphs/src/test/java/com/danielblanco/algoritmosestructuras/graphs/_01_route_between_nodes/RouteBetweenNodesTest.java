@@ -1,4 +1,4 @@
-package com.danielblanco.algoritmosestructuras.graphs._02_route_between_nodes;
+package com.danielblanco.algoritmosestructuras.graphs._01_route_between_nodes;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
