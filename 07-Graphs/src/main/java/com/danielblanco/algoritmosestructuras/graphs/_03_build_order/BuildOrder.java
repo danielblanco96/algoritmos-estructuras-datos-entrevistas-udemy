@@ -1,6 +1,6 @@
 package com.danielblanco.algoritmosestructuras.graphs._03_build_order;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /*
  * Dada una lista de proyectos y las dependencias entre ellos, devuelve un orden de
@@ -24,7 +24,7 @@ import java.util.ArrayList;
  */
 public class BuildOrder {
 
-  public ArrayList<String> buildOrder(String[] projects, String[][] dependencies) {
+  public List<String> buildOrder(String[] projects, String[][] dependencies) {
     throw new UnsupportedOperationException("Not implemented yet");
   }
 }

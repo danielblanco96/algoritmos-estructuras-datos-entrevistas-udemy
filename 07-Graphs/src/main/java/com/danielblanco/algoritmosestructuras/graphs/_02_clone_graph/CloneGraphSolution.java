@@ -3,6 +3,7 @@ package com.danielblanco.algoritmosestructuras.graphs._02_clone_graph;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /*
  * Devuelve una copia profunda (clon) de un grafo conexo y no dirigido. Puedes
@@ -19,11 +20,11 @@ public class CloneGraphSolution {
   }
 
   public Node cloneGraph(Node node) {
-    HashMap<Integer, Node> map = new HashMap<>();
+    Map<Integer, Node> map = new HashMap<>();
     return clone(node, map);
   }
 
-  private Node clone(Node node, HashMap<Integer, Node> map) {
+  private Node clone(Node node, Map<Integer, Node> map) {
     if (node == null) return null;
 
     if (map.containsKey(node.val)) return map.get(node.val);
