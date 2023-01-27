@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.danielblanco.algoritmosestructuras.graphs._00_graph_search.Graph;
 import com.danielblanco.algoritmosestructuras.graphs._00_graph_search.GraphNode;
+import com.danielblanco.algoritmosestructuras.graphs._00_graph_search.GraphNodeStatus;
 import org.junit.jupiter.api.Test;
 
 public class RouteBetweenNodesTest {
@@ -31,10 +32,15 @@ public class RouteBetweenNodesTest {
     graph.addEdge("6", "5");
 
     assertTrue(routeBetweenNodes.isRouteBetween(graph, node0, node3));
+    clear(graph);
     assertTrue(routeBetweenNodes.isRouteBetween(graph, node3, node0));
+    clear(graph);
     assertTrue(routeBetweenNodes.isRouteBetween(graph, node6, node4));
+    clear(graph);
     assertTrue(routeBetweenNodes.isRouteBetween(graph, node1, node0));
+    clear(graph);
     assertFalse(routeBetweenNodes.isRouteBetween(graph, node0, node4));
+    clear(graph);
 
     Graph graph2 = new Graph();
     graph2.addEdge("4", "1");
@@ -49,8 +55,16 @@ public class RouteBetweenNodesTest {
     node4 = graph2.getOrCreateNode("4");
 
     assertFalse(routeBetweenNodes.isRouteBetween(graph2, node2, node4));
+    clear(graph2);
     assertTrue(routeBetweenNodes.isRouteBetween(graph2, node3, node1));
+    clear(graph2);
     assertFalse(routeBetweenNodes.isRouteBetween(graph2, node0, node1));
+    clear(graph2);
     assertTrue(routeBetweenNodes.isRouteBetween(graph2, node0, node0));
+    clear(graph2);
+  }
+
+  private void clear(Graph graph) {
+    for (GraphNode n : graph.nodes.values()) n.status = GraphNodeStatus.Unvisited;
   }
 }
