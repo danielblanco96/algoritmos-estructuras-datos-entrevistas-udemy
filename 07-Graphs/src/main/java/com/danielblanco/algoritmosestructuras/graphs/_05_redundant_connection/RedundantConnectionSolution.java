@@ -20,9 +20,11 @@ import java.util.Set;
  *  Output: [1,4]
  */
 public class RedundantConnectionSolution {
+  private static final int MAX_NODE_VALUE = 1000;
+
   public int[] findRedundantConnection(int[][] edges) {
     List<Set<Integer>> adjList = new ArrayList<>();
-    for (int i = 0; i <= edges.length; i++) adjList.add(new HashSet<>());
+    for (int i = 0; i < MAX_NODE_VALUE; i++) adjList.add(new HashSet<>());
 
     for (int[] edge : edges) {
       int first = edge[0];
