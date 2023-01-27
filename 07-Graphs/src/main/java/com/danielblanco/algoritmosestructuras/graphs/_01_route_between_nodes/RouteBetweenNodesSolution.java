@@ -6,7 +6,7 @@ import com.danielblanco.algoritmosestructuras.graphs._00_graph_search.GraphNodeS
 import java.util.LinkedList;
 
 /*
- * Determina si el árbol second es subárbol del árbol first.
+ * Dado un grafo dirigido y dos nodos, determina si hay un camino start-end
  *
  * Ejemplo: (Matriz de adyacencia que hemos visto en la teoría):
  *
