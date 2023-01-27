@@ -29,7 +29,7 @@ public class NumberOfProvincesSolution {
 
   private void dfs(int[][] isConnected, boolean[] visited, int city) {
     for (int other = 0; other < isConnected.length; other++) {
-      if (isConnected[city][other] == 1 && !visited[other]) {
+      if (other != city && isConnected[city][other] == 1 && !visited[other]) {
         visited[other] = true;
         dfs(isConnected, visited, other);
       }

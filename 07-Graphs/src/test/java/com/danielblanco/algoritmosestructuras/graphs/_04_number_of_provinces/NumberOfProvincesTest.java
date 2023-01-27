@@ -8,7 +8,7 @@ public class NumberOfProvincesTest {
 
   @Test
   public void numberOfProvincesTest() {
-    NumberOfProvincesSolution numberOfProvinces = new NumberOfProvincesSolution();
+    NumberOfProvinces numberOfProvinces = new NumberOfProvinces();
 
     int[][] first = {{1, 1, 0}, {1, 1, 0}, {0, 0, 1}};
     assertEquals(2, numberOfProvinces.numberOfProvinces(first));
