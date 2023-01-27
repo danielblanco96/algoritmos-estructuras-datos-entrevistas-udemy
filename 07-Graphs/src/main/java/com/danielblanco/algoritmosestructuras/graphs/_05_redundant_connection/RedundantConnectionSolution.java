@@ -6,24 +6,18 @@ import java.util.List;
 import java.util.Set;
 
 /*
- * Dada una lista de proyectos y las dependencias entre ellos, devuelve un orden de
- * compilación válido para dichos proyectos.
+ * Dado un grafo formado tras añadir una arista entre dos nodos de un árbol, devuelve
+ * la arista que puede ser eliminada para volver a formar un árbol.
  *
- * La lista de dependencias es una lista de pares de strings (a, b), que indican que el
- * proyecto b depende del a (el a debe ser compilado con antelación).
+ * En caso de existir múltiples soluciones, devuelve la última arista del input.
  *
  * Ejemplo 1:
- *  Input:
- *    projects: a, b, c, d
- *    dependencies: [(a, b), (a, c), (a, d), (c, b), (d, b), (d, c)]
- *  Output: a, d, c, b
+ *  Input: [[1,2],[1,3],[2,3]]
+ *  Output: [2,3]
  *
- * Ejemplo2:
- *  Input:
- *    projects: a, b, c, d
- *    dependencies: [(a, b), (b, c), (c, d), (d, a)]
- *  Output: Lanza excepción. No se puede construir ya que se forma un ciclo.
- *
+ * Ejemplo 2:
+ *  Input: [[1,2],[2,3],[3,4],[1,4],[1,5]]
+ *  Output: [1,4]
  */
 public class RedundantConnectionSolution {
   public int[] findRedundantConnection(int[][] edges) {
