@@ -8,7 +8,7 @@ public class RedundantConnectionTest {
 
   @Test
   public void redundantConnectionTest() {
-    RedundantConnectionSolution redundantConnection = new RedundantConnectionSolution();
+    RedundantConnection redundantConnection = new RedundantConnection();
 
     int[][] first = {{1, 2}, {1, 3}, {2, 3}};
     assertArrayEquals(new int[] {2, 3}, redundantConnection.findRedundantConnection(first));
