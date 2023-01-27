@@ -4,6 +4,7 @@ import com.danielblanco.algoritmosestructuras.graphs._00_graph_search.Graph;
 import com.danielblanco.algoritmosestructuras.graphs._00_graph_search.GraphNode;
 import com.danielblanco.algoritmosestructuras.graphs._00_graph_search.GraphNodeStatus;
 import java.util.LinkedList;
+import java.util.Queue;
 
 /*
  * Dado un grafo dirigido y dos nodos, determina si hay un camino start-end
@@ -26,26 +27,15 @@ import java.util.LinkedList;
 public class RouteBetweenNodesSolution {
 
   public boolean isRouteBetween(Graph g, GraphNode start, GraphNode end) {
-    if (start == end) {
-      return true;
-    }
+    if (start == end) return true;
 
-    LinkedList<GraphNode> queue = new LinkedList<GraphNode>();
-
-    for (GraphNode u : g.nodes.values()) {
-      u.status = GraphNodeStatus.Unvisited;
-    }
-
-    start.status = GraphNodeStatus.Visiting;
+    Queue<GraphNode> queue = new LinkedList<>();
     queue.add(start);
-    GraphNode next;
 
     while (!queue.isEmpty()) {
-      next = queue.removeFirst();
+      GraphNode next = queue.remove();
 
-      if (next == end) {
-        return true;
-      }
+      if (end == next) return true;
 
       for (GraphNode n : next.adjacents.values()) {
         if (!n.status.equals(GraphNodeStatus.Visited)) {
@@ -54,6 +44,7 @@ public class RouteBetweenNodesSolution {
         }
       }
     }
+
     return false;
   }
 }
