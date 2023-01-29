@@ -1,4 +1,4 @@
-package com.danielblanco.algoritmosestructuras.extra._03_merge_k_sorted_lists;
+package com.danielblanco.algoritmosestructuras.extra._01_merge_k_sorted_lists;
 
 /*
  * Dado un array de listas enlazadas, cada una de ellas ordenada de forma ascendente,

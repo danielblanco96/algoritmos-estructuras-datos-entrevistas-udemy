@@ -1,8 +1,8 @@
-package com.danielblanco.algoritmosestructuras.extra._03_merge_k_sorted_lists;
+package com.danielblanco.algoritmosestructuras.extra._01_merge_k_sorted_lists;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import com.danielblanco.algoritmosestructuras.extra._03_merge_k_sorted_lists.MergeKSortedLists.Node;
+import com.danielblanco.algoritmosestructuras.extra._01_merge_k_sorted_lists.MergeKSortedLists.Node;
 import org.junit.jupiter.api.Test;
 
 public class MergeKSortedListsTest {
