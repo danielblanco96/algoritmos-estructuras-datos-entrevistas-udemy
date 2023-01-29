@@ -19,9 +19,9 @@ import java.util.Map;
  *      ["o","f","l","v"]
  *    ]
  *
- *    words = ["pero","pato","comida", "veo"]
+ *    words = ["pero","pato","comida", "veo", "pata"]
  *
- *  Output: ["pero","pato", "veo"]
+ *  Output: ["pero","pato", "veo", "pata"]
  *
  */
 public class WordSearchSolution {
