@@ -16,9 +16,9 @@ package com.danielblanco.algoritmosestructuras.heaps._01_kth_largest_element;
  *    add(1) = 3
  *    add(8) = 4
  */
-public class KthLargestElement {
+public class KthLargest {
 
-  public KthLargestElement(int k, int[] nums) {
+  public KthLargest(int k, int[] nums) {
     throw new UnsupportedOperationException("Not implemented yet");
   }
 

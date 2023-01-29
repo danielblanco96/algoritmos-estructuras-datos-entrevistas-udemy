@@ -28,11 +28,11 @@ import java.util.PriorityQueue;
  * uno más grande, el que se eliminará será el kth elemento más grande actual, y uno nuevo pasará
  * a esa posición.
  */
-public class KthLargestElementSolution {
+public class KthLargestSolution {
   private int k;
   private PriorityQueue<Integer> heap;
 
-  public KthLargestElementSolution(int k, int[] nums) {
+  public KthLargestSolution(int k, int[] nums) {
     this.k = k;
     heap = new PriorityQueue<>();
 
