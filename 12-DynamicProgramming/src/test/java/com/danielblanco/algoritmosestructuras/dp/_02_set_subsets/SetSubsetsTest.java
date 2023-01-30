@@ -11,7 +11,7 @@ public class SetSubsetsTest {
 
   @Test
   public void setSubsetsTest() {
-    SetSubsetsSolution setSubsets = new SetSubsetsSolution();
+    SetSubsets setSubsets = new SetSubsets();
 
     List<Integer> set = new ArrayList<>(List.of(1, 2, 3));
     List<List<Integer>> result = setSubsets.subsets(set);
