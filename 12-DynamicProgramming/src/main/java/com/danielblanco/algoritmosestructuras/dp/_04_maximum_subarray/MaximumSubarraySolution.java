@@ -3,7 +3,6 @@ package com.danielblanco.algoritmosestructuras.dp._04_maximum_subarray;
 /*
  * Dado un array de enteros, encuentra el subarray con la mayor suma y devuelve dicha suma.
  *
- *
  * Ejemplo 1:
  *  Input:
  *    [-2,1,-3,4,-1,2,1,-5,4]
