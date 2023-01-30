@@ -3,22 +3,20 @@ package com.danielblanco.algoritmosestructuras.dp._01_robot_in_grid;
 import java.util.ArrayList;
 
 /*
- * Dado un tablero m x n y un array de palabras, retorna todas las palabras existentes en el tablero.
- * Las palabras se pueden formar con caracteres horizontales o verticales, y un caracter no puede ser
- * usado múltiples veces en una palabra.
+ * Un robot está en la esquina superior izquierda (0,0) de un tablero m x n. En el tablero hay celdas
+ * transitables (true) y no transitables (false). Encuentra un camino válido para ir a la esquina
+ * inferior izquierda con el robot
  *
  * Ejemplo:
  *  Input:
  *    [
- *      ["p","e","r","o"]
- *      ["a","t","a","e"]
- *      ["t","e","l","v"]
- *      ["o","f","l","v"]
+ *      [true,true,true,true]
+ *      [false,false,false,true]
+ *      [true,true,false,true]
+ *      [true,true,false,true]
  *    ]
  *
- *    words = ["pero","pato","comida", "veo", "pata"]
- *
- *  Output: ["pero","pato", "veo", "pata"]
+ *  Output: [(0,0), (0,1), (0,2), (0,3), (1,3), (2,3), (3,3)]
  *
  */
 public class RobotInGrid {
