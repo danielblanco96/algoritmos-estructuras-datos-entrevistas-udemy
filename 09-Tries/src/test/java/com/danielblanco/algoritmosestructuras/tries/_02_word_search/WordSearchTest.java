@@ -11,7 +11,7 @@ public class WordSearchTest {
 
   @Test
   public void wordSearchTest() {
-    WordSearchSolution wordSearch = new WordSearchSolution();
+    WordSearch wordSearch = new WordSearch();
 
     char[][] board =
         new char[][] {

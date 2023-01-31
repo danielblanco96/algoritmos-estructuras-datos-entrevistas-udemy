@@ -3,7 +3,6 @@ package com.danielblanco.algoritmosestructuras.tries._02_word_search;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /*
  * Dado un tablero m x n y un array de palabras, retorna todas las palabras existentes en el tablero.
@@ -26,109 +25,76 @@ import java.util.Map;
  */
 public class WordSearchSolution {
 
-  public class TrieNode {
-    int count;
-    boolean isWord;
-    boolean deleted;
-    Map<Character, TrieNode> children;
+  class TrieNode {
+    HashMap<Character, TrieNode> map;
+    String word;
 
     public TrieNode() {
-      deleted = false;
-      count = 0;
-      isWord = false;
-      children = new HashMap<Character, TrieNode>();
+      map = new HashMap<>();
     }
   }
 
-  TrieNode root;
-
   public List<String> findWords(char[][] board, String[] words) {
-    if (board == null || words == null) return null;
+    List<String> result = new ArrayList<>();
 
-    root = buildTrie(words);
-    List<String> result = new ArrayList<String>();
-    for (int row = 0; row < board.length; row++) {
-      for (int col = 0; col < board[0].length; col++) {
-        dfs(
-            board,
-            row,
-            col,
-            root,
-            new boolean[board.length][board[0].length],
-            new StringBuilder(),
-            result,
-            words.length);
+    int rows = board.length;
+    int cols = board[0].length;
+
+    TrieNode root = buildTrie(words, rows * cols);
+    for (int row = 0; row < rows; row++) {
+      for (int col = 0; col < cols; col++) {
+        if (root.map.containsKey(board[row][col])) {
+          dfs(board, root, row, col, result);
+        }
       }
     }
-
     return result;
   }
 
-  private void dfs(
-      char[][] board,
-      int row,
-      int col,
-      TrieNode n,
-      boolean[][] visited,
-      StringBuilder currWord,
-      List<String> result,
-      int maxLength) {
-    if (n.isWord) {
-      result.add(currWord.toString());
-      removeWord(root, currWord.toString());
+  private void dfs(char[][] board, TrieNode current, int row, int col, List<String> result) {
+    if (current == null) {
+      return;
     }
+
+    if (current.word != null) {
+      result.add(current.word);
+      current.word = null; // Se pone a null para no volver a añadirla
+    }
+
     if (row < 0
         || row >= board.length
         || col < 0
         || col >= board[0].length
-        || visited[row][col]
-        || result.size() == maxLength) return;
+        || !current.map.containsKey(board[row][col])) {
+      return;
+    }
 
     char currentChar = board[row][col];
-    if (!n.children.containsKey(currentChar)) return;
+    board[row][col] = '#';
+    dfs(board, current.map.get(currentChar), row - 1, col, result);
+    dfs(board, current.map.get(currentChar), row, col + 1, result);
+    dfs(board, current.map.get(currentChar), row + 1, col, result);
+    dfs(board, current.map.get(currentChar), row, col - 1, result);
 
-    visited[row][col] = true;
-    currWord.append(currentChar);
-    TrieNode child = n.children.get(currentChar);
-
-    dfs(board, row - 1, col, child, visited, currWord, result, maxLength);
-    if (n.deleted) return;
-    dfs(board, row, col + 1, child, visited, currWord, result, maxLength);
-    if (n.deleted) return;
-    dfs(board, row + 1, col, child, visited, currWord, result, maxLength);
-    if (n.deleted) return;
-    dfs(board, row, col - 1, child, visited, currWord, result, maxLength);
-
-    visited[row][col] = false;
-    currWord.setLength(currWord.length() - 1);
+    board[row][col] = currentChar;
   }
 
-  private TrieNode buildTrie(String[] words) {
+  private TrieNode buildTrie(String[] words, int maxLen) {
     TrieNode root = new TrieNode();
-    for (String w : words) addWord(root, w);
-    return root;
-  }
-
-  private void addWord(TrieNode n, String w) {
-    for (char c : w.toCharArray()) {
-      TrieNode child = n.children.get(c);
-      if (child == null) {
-        child = new TrieNode();
-        n.children.put(c, child);
+    for (String word : words) {
+      if (word == null || word.length() == 0 || word.length() > maxLen) {
+        continue;
       }
-      n = child;
-      n.count++;
+      TrieNode current = root;
+      for (int i = 0; i < word.length(); i++) {
+        char c = word.charAt(i);
+        if (!current.map.containsKey(c)) {
+          current.map.put(c, new TrieNode());
+        }
+        current = current.map.get(c);
+      }
+      current.word = word;
     }
-    n.isWord = true;
-  }
-
-  private void removeWord(TrieNode n, String w) {
-    for (char c : w.toCharArray()) {
-      TrieNode child = n.children.get(c);
-
-      n = child;
-      n.count--;
-    }
-    n.isWord = false;
+    return root;
   }
 }
