@@ -1,6 +1,6 @@
 package com.danielblanco.algoritmosestructuras.dp._01_robot_in_grid;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /*
  * Un robot está en la esquina superior izquierda (0,0) de un tablero m x n. En el tablero hay celdas
@@ -32,7 +32,7 @@ import java.util.ArrayList;
  */
 public class RobotInGrid {
 
-  ArrayList<Cell> getPath(boolean[][] grid) {
+  List<Cell> getPath(boolean[][] grid) {
     throw new UnsupportedOperationException("Not implemented yet");
   }
 }
