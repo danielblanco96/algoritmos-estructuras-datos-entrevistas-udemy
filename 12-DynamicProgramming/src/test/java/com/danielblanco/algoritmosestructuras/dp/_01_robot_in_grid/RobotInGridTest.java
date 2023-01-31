@@ -9,7 +9,7 @@ public class RobotInGridTest {
 
   @Test
   public void robotInGridTest() {
-    RobotInGrid r = new RobotInGrid();
+    RobotInGridSolution r = new RobotInGridSolution();
 
     boolean[][] grid = {
       {true, true, true, true},
@@ -32,8 +32,8 @@ public class RobotInGridTest {
 
     boolean[][] grid2 = {
       {true, true, true, true},
-      {false, true, false, false},
-      {true, true, false, true},
+      {false, true, true, true},
+      {true, true, false, false},
       {true, true, true, true}
     };
 
