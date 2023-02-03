@@ -42,11 +42,11 @@ public class ReverseNodesKGroupSolution {
         current = current.next;
       }
 
-      if (nodesToAdvance == 0) {
+      if (nodesToAdvance > 0) {
+        prev.next = tail;
+      } else {
         prev.next = reverse(tail, k);
         prev = tail;
-      } else {
-        prev.next = tail;
       }
     }
 
