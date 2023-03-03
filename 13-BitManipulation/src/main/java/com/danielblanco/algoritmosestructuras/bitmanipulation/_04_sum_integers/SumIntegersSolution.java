@@ -21,7 +21,12 @@ public class SumIntegersSolution {
 
       int sum = firstBit ^ secondBit ^ carry;
       result = updateBit(result, i, sum);
-      carry = (firstBit + secondBit + carry) > 1 ? 1 : 0;
+      carry =
+          (firstBit == 1 && secondBit == 1
+                  || firstBit == 1 && carry == 1
+                  || carry == 1 && secondBit == 1)
+              ? 1
+              : 0;
     }
 
     return result;
