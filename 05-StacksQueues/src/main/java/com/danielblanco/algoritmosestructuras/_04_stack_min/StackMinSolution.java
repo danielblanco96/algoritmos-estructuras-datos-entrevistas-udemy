@@ -14,7 +14,7 @@ public class StackMinSolution {
 
   public void push(Integer data) {
     valuesStack.push(data);
-    if (minStack.isEmpty() || data < minStack.peek()) {
+    if (minStack.isEmpty() || data <= minStack.peek()) {
       minStack.push(data);
     }
   }
