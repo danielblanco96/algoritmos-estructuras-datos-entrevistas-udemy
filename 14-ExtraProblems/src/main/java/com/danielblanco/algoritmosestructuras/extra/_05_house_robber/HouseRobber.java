@@ -1,7 +1,7 @@
 package com.danielblanco.algoritmosestructuras.extra._05_house_robber;
 
 /*
- * Dada un array de enteros que representa el dinero que hay en cada casa en un vecindario,
+ * Dado un array de enteros que representa el dinero que hay en cada casa en un vecindario,
  * devuelve la mayor cantidad que un ladrón puede robar teniendo en cuenta que no puede robar
  * dos casas consecutivas.
  *
