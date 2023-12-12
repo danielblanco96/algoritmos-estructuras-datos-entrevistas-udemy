@@ -14,36 +14,29 @@ public class MergeTwoSortedListsSolution {
 
   public Node mergeTwoLists(Node list1, Node list2) {
     Node dummy = new Node(Integer.MIN_VALUE);
-
-    // Se toman los nodos de forma ordenada hasta que se finalice una de las dos listas
     Node current = dummy;
-    while (list1 != null && list2 != null) {
-      if (list1.value <= list2.value) {
-        current.next = list1;
-        list1 = list1.next;
-      } else {
-        current.next = list2;
-        list2 = list2.next;
-      }
 
-      current = current.next;
+    // Mientras haya alguna lista con valores
+    while(list1 != null || list2 != null){
+        // Si list1 es null tomar valores de la list2
+        if (list1 == null){
+            current.next = list2;
+            list2 = list2.next;
+          
+        // Si la list22 esta vacia o el valor de list1 es menor, usar lista1
+        } else if (list2 == null || list1.val <= list2.val){
+            current.next = list1;
+            list1 = list1.next;
+          
+        // valor en list2 es menor, usar list2
+        } else {
+            current.next = list2;
+            list2 = list2.next;
+        }
+        current = current.next;
     }
-
-    // Para acabar, se añaden los elementos de la lista que aún no hemos finalizado.
-    if (list1 == null) {
-      appendList(current, list2);
-    } else {
-      appendList(current, list1);
-    }
-
-    return dummy.next;
+    
+    return dummy.next;   
   }
 
-  private void appendList(Node current, Node listToAppend) {
-    while (listToAppend != null) {
-      current.next = listToAppend;
-      listToAppend = listToAppend.next;
-      current = current.next;
-    }
-  }
 }
