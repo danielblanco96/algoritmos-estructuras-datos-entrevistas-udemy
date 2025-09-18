@@ -7,8 +7,8 @@ import com.danielblanco.algoritmosestructuras._00_linkedlist.Node;
  * dos enteros positivos. Las listas están en posición invertida.
  *
  * Ejemplo:
- *  Input: 1->2->4, 5->2->8
- *  Output: 6->4->2->1
+ *  Input: 1->2->4->6, 5->2->8
+ *  Output: 6->4->2->7
  *  6421 + 825 = 7246
  */
 public class AddTwoNumbers {
