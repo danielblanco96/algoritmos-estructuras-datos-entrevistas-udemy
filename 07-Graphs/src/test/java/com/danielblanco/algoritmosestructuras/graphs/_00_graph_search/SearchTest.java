@@ -27,7 +27,7 @@ public class SearchTest {
   private boolean searchTest(Graph graph, String target) {
     Boolean dfs = DepthFirstSearch.depthFirstSearch(graph, target);
     resetNodes(graph);
-    Boolean bfs = DepthFirstSearch.depthFirstSearch(graph, target);
+    Boolean bfs = BreadthFirstSearch.breadthFirstSearch(graph, target);
     resetNodes(graph);
     return dfs && bfs && dfs == bfs;
   }
